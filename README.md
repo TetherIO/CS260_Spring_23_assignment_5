@@ -25,9 +25,6 @@ In class, I think our process and tests were pretty solid. I quickly whipped up 
 
 ![](https://github.com/TetherIO/CS260_Spring_23_assignment_5/blob/master/complexitychart.jpg)
 
-
-Given the hint, that operations not having to do with the structure as O(1), I would think that all three methods will have a constant time complexity O(1). They all perform a fixed number of operations regardless of the input; the operations performed by the methods only accoess and modify the first/last nodes of the list, which remains constant as the size of the list increases.
-
 ### Requirements:
 
 1. automatically inserts values in the correct position based on some order of sorting (perhaps ascending integers or lexicographical sorting of words)

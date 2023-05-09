@@ -55,6 +55,10 @@ public:
 bool binary_search(int data) {
     node* current = head; //
     int length = 0; // to count how many nodes traversed
+    
+    while (current != nullptr) { // catches empty list as length zero
+        length++;
+        current = current->next;
     }
 
 

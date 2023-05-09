@@ -51,7 +51,7 @@ public:
     }
 
 
-// Binary search of linked list
+// search of linked list
     bool list_search(int searched) {
         node* current = head; // sets current node pointer
         while (current != nullptr) {

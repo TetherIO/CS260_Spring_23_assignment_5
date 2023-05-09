@@ -21,23 +21,25 @@ private:
 
 public:
     list() {
-        head = NULL;
+        head = nullptr;
     }
-
-    // Insert data into new node position for ascending order end-list
-    void insert(int data, int position) {
-        // create a new node with the given data
+    
+    
+    // Insert data into new node in list of ascending order
+    void insert(int data) {
+        // Create a new node with the given data
         node* new_node = new node;
         new_node->data = data;
+        new_node->next = nullptr;
 
         // if data is less than head, insert at the beginning of the list (edge case)
-        if (data < head->data) { // ASCENDING ORDER LIST
+        if (head == nullptr || data < head->data) { // checks epmy list or new node less than th
             new_node->next = head;
             head = new_node;
             return;
         }
 
-        // find the next
+        // inserting new node
         node* current = head;
 
         if(head == NULL) {

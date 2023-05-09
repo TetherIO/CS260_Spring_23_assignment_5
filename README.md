@@ -3,9 +3,20 @@
 
 Create an array-based list or a linked-list (and a bonus for attempting both) that:
 
-    automatically inserts values in the correct position based on some order of sorting (perhaps ascending integers or lexicographical sorting of words)
+    "automatically inserts values in the correct position based on some order of sorting (perhaps ascending integers or lexicographical sorting of words)"
 
-    efficiently searches for elements (likely binary search for the array list, but what about the linked-list?)
+    "efficiently searches for elements (likely binary search for the array list, but what about the linked-list?)"
+    
+### Tests:
+In class, I think our process and tests were pretty solid. I quickly whipped up a few tests and console output to show tests:
+    1. Insert various elements in a random order and use display function to iterate through and print each.
+    2. Search for items in and not in the list, expected output would be True, False.
+    
+
+![](https://github.com/TetherIO/CS260_Spring_23_assignment_5/blob/master/tests.png)
+   
+![](https://github.com/TetherIO/CS260_Spring_23_assignment_5/blob/master/terminaloutput.png)
+
     
 ### Time complexity analysis (chart):
 *Insert function traverses list to find position, in worst case it'll traverse to the end of list. Therefore, complexity is O(n) where n is the nodes in the list.

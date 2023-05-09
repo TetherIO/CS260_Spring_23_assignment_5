@@ -33,7 +33,7 @@ public:
         new_node->next = nullptr;
 
         // if data is less than head, insert at the beginning of the list (edge case)
-        if (head == nullptr || data < head->data) { // checks epmy list or new node less than th
+        if (head == nullptr || data < head->data) { // checks empty list or new node less than head
             new_node->next = head;
             head = new_node; // sets new node as head once pointer to previous 'head' established
             return;
@@ -74,38 +74,38 @@ public:
         }
         cout << endl;
     }
-    };
+};
 
+// I can split this up into a few files, like a sorted list cpp/h for the class and main.cpp for the below tests, if needed
 int main() {
     list my_list;
 
-    // insert some nodes
-    my_list.insert(1);
-    my_list.display();
-
-    my_list.insert(2);
-    my_list.display();
-
-    my_list.insert(3);
-    my_list.display();
-
-    my_list.insert(4);
-    my_list.display();
-
+    // Testing by inserting some nodes and displaying the list
     my_list.insert(5);
-    my_list.display();
-
-    // after end of list
-    my_list.insert(6);
-    my_list.display();
-
-    // at the head
+    my_list.insert(3);
     my_list.insert(7);
+    my_list.insert(1);
+    my_list.insert(9);
+
+    // display for confirmation
+    cout << "Test case 1 (Insert): ";
     my_list.display();
 
-    // before the head
-    my_list.insert(8);
-    my_list.display();
+    // search element in list
+    cout << "Test case 2 (Search): ";
+    if (my_list.list_search(5)) {
+        cout << "Element 5 found." << endl;
+    } else {
+        cout << "Element 5 not found." << endl;
+    }
+
+    // searchs element not in list
+    cout << "Test case 3 (Not Found): ";
+    if (my_list.list_search(8)) {
+        cout << "Element 8 found." << endl;
+    } else {
+        cout << "Element 8 not found." << endl;
+    }
 
     return 0;
 }

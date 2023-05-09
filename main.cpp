@@ -51,15 +51,19 @@ public:
             }
 
         }
+
+
 // Binary search of linked list
-bool binary_search(int data) {
-    node* current = head; //
-    int length = 0; // to count how many nodes traversed
-    
-    while (current != nullptr) { // catches empty list as length zero
-        length++;
+bool list_search(int searched) {
+    node* current = head; // sets current node pointer
+    while (current != nullptr) {
+        if (current ->data == searched) {
+            return true;
+        }
         current = current->next;
     }
+    return false;
+} 
 
 
 // copied from the instructor's demo, updated with my nullptr usage

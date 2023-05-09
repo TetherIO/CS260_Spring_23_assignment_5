@@ -35,7 +35,7 @@ public:
         // if data is less than head, insert at the beginning of the list (edge case)
         if (head == nullptr || data < head->data) { // checks epmy list or new node less than th
             new_node->next = head;
-            head = new_node;
+            head = new_node; // sets new node as head once pointer to previous 'head' established
             return;
         }
 
@@ -51,15 +51,18 @@ public:
             }
 
         }
+// Binary search of linked list
+bool binary_search(int data) {
+    node* current = head; //
+    int length = 0; // to count how many nodes traversed
+    }
 
 
-
+// copied from the instructor's demo, updated with my nullptr usage
     void display() {
         node* current = head;
 
-        if
-
-        while (current != NULL) {
+        while (current != nullptr) {
             cout << current->data << " ";
             current = current->next;
         }

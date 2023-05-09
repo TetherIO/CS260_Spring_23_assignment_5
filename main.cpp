@@ -41,30 +41,17 @@ public:
 
         // inserting new node
         node* current = head;
+        
+        while (current->next != nullptr && data > current->next->data) { // checks if next node exists and data greater than data of next node
+            current = current->next;  // will point to node after which new node should be inserted
+        }
 
-        if(head == NULL) {
-            head=new_node;
-            } else{
-                for (int i = 0; data < current->next->data && current != NULL; i++) {
-                    current = current->next;
-                }
-
-                new_node->next = current->next;
-                current->next = new_node;
+                new_node->next = current->next; // sets next pointer of new node to node that comes after current node 
+                current->next = new_node; // current now can point to new node, allows for insert of new node between current and current->next
             }
 
         }
 
-
-
-        // if the position is invalid, do not insert
-        if (current == NULL) {
-            cout << "Invalid position" << endl;
-            delete new_node;
-            return;
-        }
-
-        // insert the new node at the position
 
 
     void display() {
